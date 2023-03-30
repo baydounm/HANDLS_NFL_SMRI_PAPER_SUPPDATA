@@ -1,0 +1,1257 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+> 
+. ***********************TABLE 4: bayes1LnNFL, MODELS 1 AND 2*********************
+. 
+. **ANALYSES A-C, TOTAL POPULATION**
+. 
+. **Model 1**
+. 
+. use HANDLS_paper51_NFLBRAINSCANFINALIZED,clear
+{txt}
+{com}. 
+. //ANALYSIS A//
+. reg TOTALBRAIN bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN if sample_final==1,beta
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       179
+{txt}{hline 13}{c +}{hline 34}   F(7, 171)       = {res}    20.26
+{txt}       Model {c |} {res} 1.1257e+12         7  1.6082e+11   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 1.3572e+12       171  7.9368e+09   {txt}R-squared       ={res}    0.4534
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4310
+{txt}       Total {c |} {res} 2.4829e+12       178  1.3949e+10   {txt}Root MSE        =   {res}  89089
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}  TOTALBRAIN{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-33685.97{col 26}{space 2} 96825.84{col 37}{space 1}   -0.35{col 46}{space 3}0.728{col 67}{space 3}-.0212047
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-3136.559{col 26}{space 2} 17005.39{col 37}{space 1}   -0.18{col 46}{space 3}0.854{col 67}{space 3}-.0140163
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2} 137799.9{col 26}{space 2} 13639.76{col 37}{space 1}   10.10{col 46}{space 3}0.000{col 67}{space 3} .5817062
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-2153.816{col 26}{space 2} 930.2199{col 37}{space 1}   -2.32{col 46}{space 3}0.022{col 67}{space 3}-.1660571
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-71268.24{col 26}{space 2} 14344.94{col 37}{space 1}   -4.97{col 46}{space 3}0.000{col 67}{space 3} -.297988
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-3116.942{col 26}{space 2} 15963.17{col 37}{space 1}   -0.20{col 46}{space 3}0.845{col 67}{space 3}-.0122706
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-21.70245{col 26}{space 2} 11.37013{col 37}{space 1}   -1.91{col 46}{space 3}0.058{col 67}{space 3}-.1164321
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  1201692{col 26}{space 2} 57437.92{col 37}{space 1}   20.92{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg GM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN if sample_final==1,beta
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       179
+{txt}{hline 13}{c +}{hline 34}   F(7, 171)       = {res}    23.07
+{txt}       Model {c |} {res} 3.6783e+11         7  5.2547e+10   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 3.8941e+11       171  2.2773e+09   {txt}R-squared       ={res}    0.4858
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4647
+{txt}       Total {c |} {res} 7.5724e+11       178  4.2542e+09   {txt}Root MSE        =   {res}  47721
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          GM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-31770.53{col 26}{space 2} 51865.21{col 37}{space 1}   -0.61{col 46}{space 3}0.541{col 67}{space 3}-.0362135
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} -7738.55{col 26}{space 2} 9109.017{col 37}{space 1}   -0.85{col 46}{space 3}0.397{col 67}{space 3}-.0626183
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2} 71788.22{col 26}{space 2} 7306.201{col 37}{space 1}    9.83{col 46}{space 3}0.000{col 67}{space 3}  .548746
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-1828.012{col 26}{space 2} 498.2766{col 37}{space 1}   -3.67{col 46}{space 3}0.000{col 67}{space 3}-.2552062
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-50935.22{col 26}{space 2} 7683.934{col 37}{space 1}   -6.63{col 46}{space 3}0.000{col 67}{space 3} -.385642
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-2535.302{col 26}{space 2} 8550.748{col 37}{space 1}   -0.30{col 46}{space 3}0.767{col 67}{space 3}-.0180731
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-8.388294{col 26}{space 2} 6.090461{col 37}{space 1}   -1.38{col 46}{space 3}0.170{col 67}{space 3}-.0814893
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 734516.3{col 26}{space 2} 30766.89{col 37}{space 1}   23.87{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg WM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN if sample_final==1,beta
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       179
+{txt}{hline 13}{c +}{hline 34}   F(7, 171)       = {res}    13.34
+{txt}       Model {c |} {res} 1.7577e+11         7  2.5110e+10   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 3.2187e+11       171  1.8823e+09   {txt}R-squared       ={res}    0.3532
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.3267
+{txt}       Total {c |} {res} 4.9764e+11       178  2.7958e+09   {txt}Root MSE        =   {res}  43385
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          WM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-16424.03{col 26}{space 2} 47153.45{col 37}{space 1}   -0.35{col 46}{space 3}0.728{col 67}{space 3}-.0230932
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 1185.819{col 26}{space 2} 8281.496{col 37}{space 1}    0.14{col 46}{space 3}0.886{col 67}{space 3} .0118364
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2} 56353.33{col 26}{space 2}  6642.46{col 37}{space 1}    8.48{col 46}{space 3}0.000{col 67}{space 3} .5313689
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-701.5875{col 26}{space 2}   453.01{col 37}{space 1}   -1.55{col 46}{space 3}0.123{col 67}{space 3}-.1208238
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-18372.46{col 26}{space 2} 6985.877{col 37}{space 1}   -2.63{col 46}{space 3}0.009{col 67}{space 3}-.1715899
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-4844.275{col 26}{space 2} 7773.944{col 37}{space 1}   -0.62{col 46}{space 3}0.534{col 67}{space 3} -.042598
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-11.77304{col 26}{space 2} 5.537165{col 37}{space 1}   -2.13{col 46}{space 3}0.035{col 67}{space 3}-.1410829
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 463084.6{col 26}{space 2} 27971.83{col 37}{space 1}   16.56{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS B//
+. reg Left_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN ICV_volM2 if sample_final==1,beta
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       179
+{txt}{hline 13}{c +}{hline 34}   F(8, 170)       = {res}    19.31
+{txt}       Model {c |} {res} 12603299.9         8  1575412.48   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}   13866784       170  81569.3177   {txt}R-squared       ={res}    0.4761
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4515
+{txt}       Total {c |} {res} 26470083.9       178  148708.336   {txt}Root MSE        =   {res}  285.6
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Left_Hippo~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-894.0536{col 26}{space 2} 310.4257{col 37}{space 1}   -2.88{col 46}{space 3}0.004{col 67}{space 3}-.1723653
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-104.8599{col 26}{space 2} 54.51701{col 37}{space 1}   -1.92{col 46}{space 3}0.056{col 67}{space 3}-.1435131
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}-13.24759{col 26}{space 2} 58.47753{col 37}{space 1}   -0.23{col 46}{space 3}0.821{col 67}{space 3}-.0171275
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-3.998253{col 26}{space 2} 2.983837{col 37}{space 1}   -1.34{col 46}{space 3}0.182{col 67}{space 3} -.094411
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-102.2841{col 26}{space 2} 50.07386{col 37}{space 1}   -2.04{col 46}{space 3}0.043{col 67}{space 3}-.1309828
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}  -126.98{col 26}{space 2} 51.18928{col 37}{space 1}   -2.48{col 46}{space 3}0.014{col 67}{space 3}-.1531009
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0152404{col 26}{space 2} .0366713{col 37}{space 1}    0.42{col 46}{space 3}0.678{col 67}{space 3} .0250417
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0016595{col 26}{space 2} .0002159{col 37}{space 1}    7.69{col 46}{space 3}0.000{col 67}{space 3}  .611484
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2050.363{col 26}{space 2} 331.5064{col 37}{space 1}    6.18{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg Right_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN ICV_volM2 if sample_final==1,beta
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       179
+{txt}{hline 13}{c +}{hline 34}   F(8, 170)       = {res}    21.59
+{txt}       Model {c |} {res} 15327989.3         8  1915998.67   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}   15083238       170  88724.9293   {txt}R-squared       ={res}    0.5040
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4807
+{txt}       Total {c |} {res} 30411227.3       178  170849.592   {txt}Root MSE        =   {res} 297.87
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Right_Hipp~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-724.9613{col 26}{space 2} 323.7555{col 37}{space 1}   -2.24{col 46}{space 3}0.026{col 67}{space 3}-.1303952
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-84.48767{col 26}{space 2} 56.85798{col 37}{space 1}   -1.49{col 46}{space 3}0.139{col 67}{space 3}-.1078788
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}-93.07535{col 26}{space 2} 60.98857{col 37}{space 1}   -1.53{col 46}{space 3}0.129{col 67}{space 3}-.1122674
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-2.581855{col 26}{space 2} 3.111964{col 37}{space 1}   -0.83{col 46}{space 3}0.408{col 67}{space 3}-.0568781
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-98.90267{col 26}{space 2} 52.22405{col 37}{space 1}   -1.89{col 46}{space 3}0.060{col 67}{space 3}-.1181612
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-101.4898{col 26}{space 2} 53.38735{col 37}{space 1}   -1.90{col 46}{space 3}0.059{col 67}{space 3} -.114163
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0485013{col 26}{space 2}  .038246{col 37}{space 1}    1.27{col 46}{space 3}0.206{col 67}{space 3}   .07435
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0020904{col 26}{space 2} .0002252{col 37}{space 1}    9.28{col 46}{space 3}0.000{col 67}{space 3} .7186003
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1660.579{col 26}{space 2} 345.7413{col 37}{space 1}    4.80{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS C//
+. reg LnLesion_Volume bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN ICV_volM2 if sample_final==1,beta 
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       179
+{txt}{hline 13}{c +}{hline 34}   F(8, 170)       = {res}     2.64
+{txt}       Model {c |} {res} 290.567914         8  36.3209892   {txt}Prob > F        ={res}    0.0093
+{txt}    Residual {c |} {res} 2334.54342       170  13.7326084   {txt}R-squared       ={res}    0.1107
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0688
+{txt}       Total {c |} {res} 2625.11134       178  14.7478165   {txt}Root MSE        =   {res} 3.7058
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}LnLesion_V~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-2.549486{col 26}{space 2} 4.027827{col 37}{space 1}   -0.63{col 46}{space 3}0.528{col 67}{space 3}-.0493563
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 1.972885{col 26}{space 2} .7073676{col 37}{space 1}    2.79{col 46}{space 3}0.006{col 67}{space 3} .2711364
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2} .2447912{col 26}{space 2}  .758756{col 37}{space 1}    0.32{col 46}{space 3}0.747{col 67}{space 3} .0317803
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2} .0149697{col 26}{space 2} .0387158{col 37}{space 1}    0.39{col 46}{space 3}0.699{col 67}{space 3} .0354952
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} 1.334314{col 26}{space 2}  .649717{col 37}{space 1}    2.05{col 46}{space 3}0.042{col 67}{space 3} .1715806
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} .8746417{col 26}{space 2} .6641896{col 37}{space 1}    1.32{col 46}{space 3}0.190{col 67}{space 3} .1058952
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-.0006925{col 26}{space 2} .0004758{col 37}{space 1}   -1.46{col 46}{space 3}0.147{col 67}{space 3}-.1142655
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} 2.40e-06{col 26}{space 2} 2.80e-06{col 37}{space 1}    0.86{col 46}{space 3}0.393{col 67}{space 3} .0888318
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-4.172077{col 26}{space 2} 4.301352{col 37}{space 1}   -0.97{col 46}{space 3}0.333{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. **Model 2**
+. 
+. use finaldata_imputed,clear
+{txt}
+{com}. 
+. 
+. //ANALYSIS A//
+. mi estimate: reg TOTALBRAIN bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       169
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    167.03
+{txt}{col 49}        avg{col 67}= {res}    167.03
+{txt}{col 49}        max{col 67}= {res}    167.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   9{txt},{res}  167.0{txt}){col 67}= {res}    319.44
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}  TOTALBRAIN{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-46622.42{col 26}{space 2} 31050.29{col 37}{space 1}   -1.50{col 46}{space 3}0.135{col 54}{space 4}  -107924{col 67}{space 3} 14679.18
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-2144.926{col 26}{space 2} 5628.383{col 37}{space 1}   -0.38{col 46}{space 3}0.704{col 54}{space 4}-13256.86{col 67}{space 3}  8967.01
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}-12272.52{col 26}{space 2} 5901.192{col 37}{space 1}   -2.08{col 46}{space 3}0.039{col 54}{space 4}-23923.06{col 67}{space 3}-621.9877
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-1767.206{col 26}{space 2} 303.3488{col 37}{space 1}   -5.83{col 46}{space 3}0.000{col 54}{space 4}-2366.098{col 67}{space 3}-1168.314
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} 5337.894{col 26}{space 2} 5007.912{col 37}{space 1}    1.07{col 46}{space 3}0.288{col 54}{space 4}-4549.067{col 67}{space 3} 15224.85
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} 1494.951{col 26}{space 2} 5120.779{col 37}{space 1}    0.29{col 46}{space 3}0.771{col 54}{space 4} -8614.84{col 67}{space 3} 11604.74
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-6.161073{col 26}{space 2} 3.674654{col 37}{space 1}   -1.68{col 46}{space 3}0.095{col 54}{space 4}-13.41582{col 67}{space 3} 1.093678
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 21.14185{col 26}{space 2} 351.8118{col 37}{space 1}    0.06{col 46}{space 3}0.952{col 54}{space 4} -673.429{col 67}{space 3} 715.7127
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .8346976{col 26}{space 2} .0216186{col 37}{space 1}   38.61{col 46}{space 3}0.000{col 54}{space 4} .7920166{col 67}{space 3} .8773785
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 135255.6{col 26}{space 2} 34791.99{col 37}{space 1}    3.89{col 46}{space 3}0.000{col 54}{space 4} 66566.92{col 67}{space 3} 203944.3
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg GM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI  ICV_volM2 if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       169
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    167.03
+{txt}{col 49}        avg{col 67}= {res}    167.03
+{txt}{col 49}        max{col 67}= {res}    167.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   9{txt},{res}  167.0{txt}){col 67}= {res}    120.42
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          GM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-38370.39{col 26}{space 2} 26728.49{col 37}{space 1}   -1.44{col 46}{space 3}0.153{col 54}{space 4} -91139.6{col 67}{space 3} 14398.81
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-6602.641{col 26}{space 2} 4844.985{col 37}{space 1}   -1.36{col 46}{space 3}0.175{col 54}{space 4}-16167.94{col 67}{space 3} 2962.658
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}-657.1581{col 26}{space 2} 5079.822{col 37}{space 1}   -0.13{col 46}{space 3}0.897{col 54}{space 4}-10686.09{col 67}{space 3} 9371.771
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-1666.005{col 26}{space 2} 261.1266{col 37}{space 1}   -6.38{col 46}{space 3}0.000{col 54}{space 4}-2181.539{col 67}{space 3}-1150.471
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} -13731.7{col 26}{space 2} 4310.875{col 37}{space 1}   -3.19{col 46}{space 3}0.002{col 54}{space 4}-22242.52{col 67}{space 3}-5220.875
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-361.8821{col 26}{space 2} 4408.033{col 37}{space 1}   -0.08{col 46}{space 3}0.935{col 54}{space 4} -9064.52{col 67}{space 3} 8340.756
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-.7375907{col 26}{space 2} 3.163189{col 37}{space 1}   -0.23{col 46}{space 3}0.816{col 54}{space 4}-6.982574{col 67}{space 3} 5.507393
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 174.8985{col 26}{space 2} 302.8441{col 37}{space 1}    0.58{col 46}{space 3}0.564{col 54}{space 4} -422.997{col 67}{space 3}  772.794
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .4044869{col 26}{space 2} .0186096{col 37}{space 1}   21.74{col 46}{space 3}0.000{col 54}{space 4} .3677466{col 67}{space 3} .4412272
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 212132.1{col 26}{space 2} 29949.39{col 37}{space 1}    7.08{col 46}{space 3}0.000{col 54}{space 4}   153004{col 67}{space 3} 271260.2
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg WM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       169
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    167.03
+{txt}{col 49}        avg{col 67}= {res}    167.03
+{txt}{col 49}        max{col 67}= {res}    167.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   9{txt},{res}  167.0{txt}){col 67}= {res}    110.13
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          WM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-22022.71{col 26}{space 2}  22516.6{col 37}{space 1}   -0.98{col 46}{space 3}0.329{col 54}{space 4}-66476.52{col 67}{space 3}  22431.1
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 1126.128{col 26}{space 2}  4081.51{col 37}{space 1}    0.28{col 46}{space 3}0.783{col 54}{space 4}-6931.866{col 67}{space 3} 9184.122
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}-11790.85{col 26}{space 2} 4279.341{col 37}{space 1}   -2.76{col 46}{space 3}0.007{col 54}{space 4}-20239.42{col 67}{space 3}-3342.289
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-506.9313{col 26}{space 2} 219.9781{col 37}{space 1}   -2.30{col 46}{space 3}0.022{col 54}{space 4}-941.2271{col 67}{space 3}-72.63548
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} 16239.48{col 26}{space 2} 3631.566{col 37}{space 1}    4.47{col 46}{space 3}0.000{col 54}{space 4} 9069.797{col 67}{space 3} 23409.16
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-2709.074{col 26}{space 2} 3713.413{col 37}{space 1}   -0.73{col 46}{space 3}0.467{col 54}{space 4}-10040.35{col 67}{space 3} 4622.198
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-4.831177{col 26}{space 2} 2.664733{col 37}{space 1}   -1.81{col 46}{space 3}0.072{col 54}{space 4}-10.09207{col 67}{space 3}  .429719
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2}-118.1939{col 26}{space 2} 255.1218{col 37}{space 1}   -0.46{col 46}{space 3}0.644{col 54}{space 4}-621.8728{col 67}{space 3} 385.4849
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .3778143{col 26}{space 2} .0156771{col 37}{space 1}   24.10{col 46}{space 3}0.000{col 54}{space 4} .3468635{col 67}{space 3}  .408765
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-15278.81{col 26}{space 2} 25229.95{col 37}{space 1}   -0.61{col 46}{space 3}0.546{col 54}{space 4} -65089.5{col 67}{space 3} 34531.87
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS B//
+. mi estimate: reg Left_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       169
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    167.03
+{txt}{col 49}        avg{col 67}= {res}    167.03
+{txt}{col 49}        max{col 67}= {res}    167.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   9{txt},{res}  167.0{txt}){col 67}= {res}     17.18
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Left_Hippo~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-899.0093{col 26}{space 2} 310.9472{col 37}{space 1}   -2.89{col 46}{space 3}0.004{col 54}{space 4}-1512.902{col 67}{space 3}-285.1161
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-94.81446{col 26}{space 2} 56.36437{col 37}{space 1}   -1.68{col 46}{space 3}0.094{col 54}{space 4}-206.0928{col 67}{space 3} 16.46391
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}-7.559046{col 26}{space 2} 59.09636{col 37}{space 1}   -0.13{col 46}{space 3}0.898{col 54}{space 4}-124.2311{col 67}{space 3}  109.113
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-4.390678{col 26}{space 2} 3.037829{col 37}{space 1}   -1.45{col 46}{space 3}0.150{col 54}{space 4}-10.38817{col 67}{space 3} 1.606811
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} -101.767{col 26}{space 2} 50.15078{col 37}{space 1}   -2.03{col 46}{space 3}0.044{col 54}{space 4} -200.778{col 67}{space 3}-2.755882
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-127.9666{col 26}{space 2} 51.28107{col 37}{space 1}   -2.50{col 46}{space 3}0.014{col 54}{space 4}-229.2091{col 67}{space 3}-26.72401
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0169268{col 26}{space 2} .0367991{col 37}{space 1}    0.46{col 46}{space 3}0.646{col 54}{space 4}-.0557245{col 67}{space 3} .0895782
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 2.525923{col 26}{space 2} 3.523152{col 37}{space 1}    0.72{col 46}{space 3}0.474{col 54}{space 4}-4.429723{col 67}{space 3}  9.48157
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0016516{col 26}{space 2} .0002165{col 37}{space 1}    7.63{col 46}{space 3}0.000{col 54}{space 4} .0012242{col 67}{space 3}  .002079
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1974.544{col 26}{space 2} 348.4177{col 37}{space 1}    5.67{col 46}{space 3}0.000{col 54}{space 4} 1286.675{col 67}{space 3} 2662.414
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg Right_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       169
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    167.03
+{txt}{col 49}        avg{col 67}= {res}    167.03
+{txt}{col 49}        max{col 67}= {res}    167.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   9{txt},{res}  167.0{txt}){col 67}= {res}     19.22
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Right_Hipp~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-730.5927{col 26}{space 2}  324.207{col 37}{space 1}   -2.25{col 46}{space 3}0.026{col 54}{space 4}-1370.664{col 67}{space 3}-90.52109
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-73.07245{col 26}{space 2} 58.76793{col 37}{space 1}   -1.24{col 46}{space 3}0.215{col 54}{space 4}-189.0961{col 67}{space 3}  42.9512
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}-86.61111{col 26}{space 2} 61.61642{col 37}{space 1}   -1.41{col 46}{space 3}0.162{col 54}{space 4}-208.2584{col 67}{space 3} 35.03622
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-3.027792{col 26}{space 2} 3.167372{col 37}{space 1}   -0.96{col 46}{space 3}0.340{col 54}{space 4}-9.281033{col 67}{space 3}  3.22545
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-98.31507{col 26}{space 2} 52.28937{col 37}{space 1}   -1.88{col 46}{space 3}0.062{col 54}{space 4}-201.5483{col 67}{space 3} 4.918169
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-102.6108{col 26}{space 2} 53.46786{col 37}{space 1}   -1.92{col 46}{space 3}0.057{col 54}{space 4}-208.1707{col 67}{space 3} 2.949035
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0504176{col 26}{space 2} .0383684{col 37}{space 1}    1.31{col 46}{space 3}0.191{col 54}{space 4}-.0253318{col 67}{space 3} .1261671
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 2.870365{col 26}{space 2} 3.673391{col 37}{space 1}    0.78{col 46}{space 3}0.436{col 54}{space 4}-4.381893{col 67}{space 3} 10.12262
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0020814{col 26}{space 2} .0002257{col 37}{space 1}    9.22{col 46}{space 3}0.000{col 54}{space 4} .0016358{col 67}{space 3}  .002527
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1574.421{col 26}{space 2} 363.2754{col 37}{space 1}    4.33{col 46}{space 3}0.000{col 54}{space 4} 857.2184{col 67}{space 3} 2291.624
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS C//
+. mi estimate: reg LnLesion_Volume bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1 
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       169
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    167.03
+{txt}{col 49}        avg{col 67}= {res}    167.03
+{txt}{col 49}        max{col 67}= {res}    167.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   9{txt},{res}  167.0{txt}){col 67}= {res}      2.56
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0089
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}LnLesion_V~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-2.667706{col 26}{space 2} 4.019962{col 37}{space 1}   -0.66{col 46}{space 3}0.508{col 54}{space 4}-10.60419{col 67}{space 3} 5.268776
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 2.212526{col 26}{space 2} .7286852{col 37}{space 1}    3.04{col 46}{space 3}0.003{col 54}{space 4}  .773906{col 67}{space 3} 3.651146
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2} .3804954{col 26}{space 2} .7640046{col 37}{space 1}    0.50{col 46}{space 3}0.619{col 54}{space 4}-1.127854{col 67}{space 3} 1.888845
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2} .0056082{col 26}{space 2} .0392734{col 37}{space 1}    0.14{col 46}{space 3}0.887{col 54}{space 4}-.0719281{col 67}{space 3} .0831444
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}  1.34665{col 26}{space 2} .6483551{col 37}{space 1}    2.08{col 46}{space 3}0.039{col 54}{space 4} .0666233{col 67}{space 3} 2.626677
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} .8511072{col 26}{space 2} .6629676{col 37}{space 1}    1.28{col 46}{space 3}0.201{col 54}{space 4}-.4577685{col 67}{space 3} 2.159983
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-.0006523{col 26}{space 2} .0004757{col 37}{space 1}   -1.37{col 46}{space 3}0.172{col 54}{space 4}-.0015916{col 67}{space 3} .0002869
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} .0602577{col 26}{space 2} .0455477{col 37}{space 1}    1.32{col 46}{space 3}0.188{col 54}{space 4}-.0296657{col 67}{space 3} .1501811
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} 2.21e-06{col 26}{space 2} 2.80e-06{col 37}{space 1}    0.79{col 46}{space 3}0.430{col 54}{space 4}-3.31e-06{col 67}{space 3} 7.74e-06
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-5.980781{col 26}{space 2} 4.504385{col 37}{space 1}   -1.33{col 46}{space 3}0.186{col 54}{space 4}-14.87364{col 67}{space 3} 2.912082
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. save, replace
+{txt}{p 0 4 2}
+file {bf}
+finaldata_imputed.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. *********************MALES*******************************************************
+. 
+. **Model 1**
+. 
+. use HANDLS_paper51_NFLBRAINSCANFINALIZED,clear
+{txt}
+{com}. 
+. //ANALYSIS A//
+. reg TOTALBRAIN bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN if sample_final==1 & Sex==2,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        80
+{txt}{hline 13}{c +}{hline 34}   F(6, 73)        = {res}     3.93
+{txt}       Model {c |} {res} 2.5065e+11         6  4.1775e+10   {txt}Prob > F        ={res}    0.0018
+{txt}    Residual {c |} {res} 7.7537e+11        73  1.0621e+10   {txt}R-squared       ={res}    0.2443
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1822
+{txt}       Total {c |} {res} 1.0260e+12        79  1.2988e+10   {txt}Root MSE        =   {res} 1.0e+05
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}  TOTALBRAIN{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-122181.5{col 26}{space 2} 147157.9{col 37}{space 1}   -0.83{col 46}{space 3}0.409{col 67}{space 3} -.098207
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-17415.45{col 26}{space 2} 27199.68{col 37}{space 1}   -0.64{col 46}{space 3}0.524{col 67}{space 3}-.0850754
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-1968.932{col 26}{space 2} 1579.814{col 37}{space 1}   -1.25{col 46}{space 3}0.217{col 67}{space 3}-.1508132
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-93163.42{col 26}{space 2} 24710.86{col 37}{space 1}   -3.77{col 46}{space 3}0.000{col 67}{space 3}-.4066691
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} 22738.22{col 26}{space 2} 29179.07{col 37}{space 1}    0.78{col 46}{space 3}0.438{col 67}{space 3}  .086941
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-40.11295{col 26}{space 2} 19.62159{col 37}{space 1}   -2.04{col 46}{space 3}0.045{col 67}{space 3}-.2154101
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  1536624{col 26}{space 2} 96311.78{col 37}{space 1}   15.95{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg GM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN if sample_final==1 & Sex==2,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        80
+{txt}{hline 13}{c +}{hline 34}   F(6, 73)        = {res}     6.59
+{txt}       Model {c |} {res} 1.1383e+11         6  1.8972e+10   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 2.1013e+11        73  2.8784e+09   {txt}R-squared       ={res}    0.3514
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2981
+{txt}       Total {c |} {res} 3.2396e+11        79  4.1007e+09   {txt}Root MSE        =   {res}  53651
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          GM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-62722.37{col 26}{space 2} 76607.38{col 37}{space 1}   -0.82{col 46}{space 3}0.416{col 67}{space 3}-.0897206
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-16166.96{col 26}{space 2} 14159.59{col 37}{space 1}   -1.14{col 46}{space 3}0.257{col 67}{space 3}-.1405498
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-2126.253{col 26}{space 2} 822.4187{col 37}{space 1}   -2.59{col 46}{space 3}0.012{col 67}{space 3}-.2898388
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-64672.41{col 26}{space 2} 12863.97{col 37}{space 1}   -5.03{col 46}{space 3}0.000{col 67}{space 3}-.5023976
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} 7292.922{col 26}{space 2} 15190.03{col 37}{space 1}    0.48{col 46}{space 3}0.633{col 67}{space 3} .0496252
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-15.72276{col 26}{space 2} 10.21459{col 37}{space 1}   -1.54{col 46}{space 3}0.128{col 67}{space 3}-.1502599
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 932826.6{col 26}{space 2} 50137.93{col 37}{space 1}   18.61{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg WM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN if sample_final==1 & Sex==2,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        80
+{txt}{hline 13}{c +}{hline 34}   F(6, 73)        = {res}     2.29
+{txt}       Model {c |} {res} 3.4585e+10         6  5.7641e+09   {txt}Prob > F        ={res}    0.0446
+{txt}    Residual {c |} {res} 1.8408e+11        73  2.5216e+09   {txt}R-squared       ={res}    0.1582
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0890
+{txt}       Total {c |} {res} 2.1866e+11        79  2.7679e+09   {txt}Root MSE        =   {res}  50216
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          WM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-62608.01{col 26}{space 2} 71702.08{col 37}{space 1}   -0.87{col 46}{space 3}0.385{col 67}{space 3}-.1090075
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-6555.695{col 26}{space 2} 13252.93{col 37}{space 1}   -0.49{col 46}{space 3}0.622{col 67}{space 3}-.0693709
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-365.1603{col 26}{space 2} 769.7579{col 37}{space 1}   -0.47{col 46}{space 3}0.637{col 67}{space 3}-.0605873
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-27184.84{col 26}{space 2} 12040.27{col 37}{space 1}   -2.26{col 46}{space 3}0.027{col 67}{space 3}-.2570467
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}     6134{col 26}{space 2} 14217.38{col 37}{space 1}    0.43{col 46}{space 3}0.667{col 67}{space 3} .0508044
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} -22.1668{col 26}{space 2} 9.560538{col 37}{space 1}   -2.32{col 46}{space 3}0.023{col 67}{space 3} -.257854
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 596753.5{col 26}{space 2} 46927.52{col 37}{space 1}   12.72{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS B//
+. reg Left_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN ICV_volM2 if sample_final==1 & Sex==2,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        80
+{txt}{hline 13}{c +}{hline 34}   F(7, 72)        = {res}    10.80
+{txt}       Model {c |} {res}  7478353.9         7  1068336.27   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 7120977.63        72  98902.4671   {txt}R-squared       ={res}    0.5122
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4648
+{txt}       Total {c |} {res} 14599331.5        79  184801.665   {txt}Root MSE        =   {res} 314.49
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Left_Hippo~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-882.2169{col 26}{space 2} 449.9708{col 37}{space 1}   -1.96{col 46}{space 3}0.054{col 67}{space 3}-.1879851
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-164.8617{col 26}{space 2} 83.23634{col 37}{space 1}   -1.98{col 46}{space 3}0.051{col 67}{space 3}-.2135011
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-2.426291{col 26}{space 2} 4.821531{col 37}{space 1}   -0.50{col 46}{space 3}0.616{col 67}{space 3}-.0492677
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} -24.4942{col 26}{space 2} 84.39423{col 37}{space 1}   -0.29{col 46}{space 3}0.772{col 67}{space 3}-.0283446
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-216.0532{col 26}{space 2} 89.22989{col 37}{space 1}   -2.42{col 46}{space 3}0.018{col 67}{space 3}-.2189979
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0073059{col 26}{space 2}  .061093{col 37}{space 1}    0.12{col 46}{space 3}0.905{col 67}{space 3} .0104008
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0020705{col 26}{space 2} .0003238{col 37}{space 1}    6.39{col 46}{space 3}0.000{col 67}{space 3} .6110381
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1496.062{col 26}{space 2} 620.3137{col 37}{space 1}    2.41{col 46}{space 3}0.018{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg Right_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN ICV_volM2 if sample_final==1 & Sex==2,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        80
+{txt}{hline 13}{c +}{hline 34}   F(7, 72)        = {res}    11.26
+{txt}       Model {c |} {res} 8400336.73         7   1200048.1   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 7671221.69        72  106544.746   {txt}R-squared       ={res}    0.5227
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4763
+{txt}       Total {c |} {res} 16071558.4        79  203437.448   {txt}Root MSE        =   {res} 326.41
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Right_Hipp~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-768.0578{col 26}{space 2} 467.0321{col 37}{space 1}   -1.64{col 46}{space 3}0.104{col 67}{space 3}-.1559837
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-126.3153{col 26}{space 2} 86.39238{col 37}{space 1}   -1.46{col 46}{space 3}0.148{col 67}{space 3}-.1559099
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-2.520121{col 26}{space 2} 5.004347{col 37}{space 1}   -0.50{col 46}{space 3}0.616{col 67}{space 3}-.0487729
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-20.19539{col 26}{space 2} 87.59417{col 37}{space 1}   -0.23{col 46}{space 3}0.818{col 67}{space 3}-.0222739
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-188.7048{col 26}{space 2} 92.61318{col 37}{space 1}   -2.04{col 46}{space 3}0.045{col 67}{space 3}-.1823054
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0515029{col 26}{space 2} .0634094{col 37}{space 1}    0.81{col 46}{space 3}0.419{col 67}{space 3} .0698815
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0023795{col 26}{space 2} .0003361{col 37}{space 1}    7.08{col 46}{space 3}0.000{col 67}{space 3} .6692772
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1134.656{col 26}{space 2} 643.8339{col 37}{space 1}    1.76{col 46}{space 3}0.082{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS C//
+. reg LnLesion_Volume bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN ICV_volM2 if sample_final==1 & Sex==2,beta 
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        80
+{txt}{hline 13}{c +}{hline 34}   F(7, 72)        = {res}     1.32
+{txt}       Model {c |} {res} 80.9917021         7  11.5702432   {txt}Prob > F        ={res}    0.2556
+{txt}    Residual {c |} {res} 633.349637        72  8.79652274   {txt}R-squared       ={res}    0.1134
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0272
+{txt}       Total {c |} {res} 714.341339        79  9.04229543   {txt}Root MSE        =   {res} 2.9659
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}LnLesion_V~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-5.447142{col 26}{space 2} 4.243618{col 37}{space 1}   -1.28{col 46}{space 3}0.203{col 67}{space 3} -.165932
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 1.029952{col 26}{space 2} .7849915{col 37}{space 1}    1.31{col 46}{space 3}0.194{col 67}{space 3} .1906826
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-.0467774{col 26}{space 2} .0454713{col 37}{space 1}   -1.03{col 46}{space 3}0.307{col 67}{space 3}-.1357906
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} 1.233484{col 26}{space 2} .7959113{col 37}{space 1}    1.55{col 46}{space 3}0.126{col 67}{space 3} .2040581
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} .5713892{col 26}{space 2} .8415159{col 37}{space 1}    0.68{col 46}{space 3}0.499{col 67}{space 3} .0827989
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-.0005836{col 26}{space 2} .0005762{col 37}{space 1}   -1.01{col 46}{space 3}0.314{col 67}{space 3}-.1187815
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} 2.85e-07{col 26}{space 2} 3.05e-06{col 37}{space 1}    0.09{col 46}{space 3}0.926{col 67}{space 3} .0120187
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  4.71307{col 26}{space 2}   5.8501{col 37}{space 1}    0.81{col 46}{space 3}0.423{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. **Model 2**
+. 
+. use finaldata_imputed,clear
+{txt}
+{com}. 
+. 
+. //ANALYSIS A//
+. mi estimate: reg TOTALBRAIN bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI if sample_final==1 & Sex==2
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        80
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        72
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     70.08
+{txt}{col 49}        avg{col 67}= {res}     70.08
+{txt}{col 49}        max{col 67}= {res}     70.08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   7{txt},{res}   70.1{txt}){col 67}= {res}      3.35
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0039
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}  TOTALBRAIN{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-128517.5{col 26}{space 2}   148917{col 37}{space 1}   -0.86{col 46}{space 3}0.391{col 54}{space 4}-425517.3{col 67}{space 3} 168482.2
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-16577.75{col 26}{space 2} 27444.09{col 37}{space 1}   -0.60{col 46}{space 3}0.548{col 54}{space 4}-71312.18{col 67}{space 3} 38156.67
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-2188.452{col 26}{space 2} 1686.559{col 37}{space 1}   -1.30{col 46}{space 3}0.199{col 54}{space 4} -5552.12{col 67}{space 3} 1175.215
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-93548.27{col 26}{space 2} 24875.57{col 37}{space 1}   -3.76{col 46}{space 3}0.000{col 54}{space 4}  -143160{col 67}{space 3}-43936.51
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} 23474.29{col 26}{space 2} 29411.36{col 37}{space 1}    0.80{col 46}{space 3}0.427{col 54}{space 4}-35183.63{col 67}{space 3} 82132.22
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-40.10078{col 26}{space 2} 19.73673{col 37}{space 1}   -2.03{col 46}{space 3}0.046{col 54}{space 4}-79.46366{col 67}{space 3}-.7379103
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 979.4486{col 26}{space 2} 2521.183{col 37}{space 1}    0.39{col 46}{space 3}0.699{col 54}{space 4}-4048.791{col 67}{space 3} 6007.688
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  1517663{col 26}{space 2} 108477.3{col 37}{space 1}   13.99{col 46}{space 3}0.000{col 54}{space 4}  1301316{col 67}{space 3}  1734010
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg GM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI  if sample_final==1 & Sex==2
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        80
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        72
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     70.08
+{txt}{col 49}        avg{col 67}= {res}     70.08
+{txt}{col 49}        max{col 67}= {res}     70.08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   7{txt},{res}   70.1{txt}){col 67}= {res}      5.67
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          GM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-68243.87{col 26}{space 2} 77376.58{col 37}{space 1}   -0.88{col 46}{space 3}0.381{col 54}{space 4}-222563.5{col 67}{space 3} 86075.76
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-15436.95{col 26}{space 2} 14259.82{col 37}{space 1}   -1.08{col 46}{space 3}0.283{col 54}{space 4}-43876.69{col 67}{space 3} 13002.79
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-2317.554{col 26}{space 2} 876.3277{col 37}{space 1}   -2.64{col 46}{space 3}0.010{col 54}{space 4}-4065.299{col 67}{space 3}-569.8083
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-65007.79{col 26}{space 2} 12925.23{col 37}{space 1}   -5.03{col 46}{space 3}0.000{col 54}{space 4}-90785.83{col 67}{space 3}-39229.76
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} 7934.372{col 26}{space 2}    15282{col 37}{space 1}    0.52{col 46}{space 3}0.605{col 54}{space 4}   -22544{col 67}{space 3} 38412.75
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-15.71216{col 26}{space 2} 10.25511{col 37}{space 1}   -1.53{col 46}{space 3}0.130{col 54}{space 4}-36.16492{col 67}{space 3} 4.740599
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 853.5394{col 26}{space 2} 1309.995{col 37}{space 1}    0.65{col 46}{space 3}0.517{col 54}{space 4} -1759.11{col 67}{space 3} 3466.189
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 916302.9{col 26}{space 2} 56364.28{col 37}{space 1}   16.26{col 46}{space 3}0.000{col 54}{space 4} 803890.1{col 67}{space 3}  1028716
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg WM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI if sample_final==1 & Sex==2
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        80
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        72
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     70.08
+{txt}{col 49}        avg{col 67}= {res}     70.08
+{txt}{col 49}        max{col 67}= {res}     70.08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   7{txt},{res}   70.1{txt}){col 67}= {res}      1.93
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0772
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          WM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-62453.34{col 26}{space 2} 72635.04{col 37}{space 1}   -0.86{col 46}{space 3}0.393{col 54}{space 4}-207316.4{col 67}{space 3} 82409.77
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-6576.145{col 26}{space 2}    13386{col 37}{space 1}   -0.49{col 46}{space 3}0.625{col 54}{space 4}-33273.13{col 67}{space 3} 20120.84
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-359.8014{col 26}{space 2} 822.6274{col 37}{space 1}   -0.44{col 46}{space 3}0.663{col 54}{space 4}-2000.447{col 67}{space 3} 1280.844
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-27175.45{col 26}{space 2} 12133.18{col 37}{space 1}   -2.24{col 46}{space 3}0.028{col 54}{space 4}-51373.84{col 67}{space 3} -2977.06
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} 6116.031{col 26}{space 2} 14345.54{col 37}{space 1}    0.43{col 46}{space 3}0.671{col 54}{space 4}-22494.67{col 67}{space 3} 34726.73
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-22.16709{col 26}{space 2} 9.626688{col 37}{space 1}   -2.30{col 46}{space 3}0.024{col 54}{space 4}-41.36653{col 67}{space 3}-2.967653
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2}-23.91037{col 26}{space 2}  1229.72{col 37}{space 1}   -0.02{col 46}{space 3}0.985{col 54}{space 4} -2476.46{col 67}{space 3} 2428.639
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 597216.4{col 26}{space 2} 52910.34{col 37}{space 1}   11.29{col 46}{space 3}0.000{col 54}{space 4} 491692.1{col 67}{space 3} 702740.6
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS B//
+. mi estimate: reg Left_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1 & Sex==2
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        80
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        71
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     69.08
+{txt}{col 49}        avg{col 67}= {res}     69.08
+{txt}{col 49}        max{col 67}= {res}     69.08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   8{txt},{res}   69.1{txt}){col 67}= {res}      9.54
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Left_Hippo~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-929.0205{col 26}{space 2} 453.2566{col 37}{space 1}   -2.05{col 46}{space 3}0.044{col 54}{space 4}-1833.224{col 67}{space 3}-24.81717
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-159.0118{col 26}{space 2} 83.55972{col 37}{space 1}   -1.90{col 46}{space 3}0.061{col 54}{space 4}-325.7054{col 67}{space 3} 7.681843
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-4.011589{col 26}{space 2} 5.121688{col 37}{space 1}   -0.78{col 46}{space 3}0.436{col 54}{space 4}-14.22886{col 67}{space 3} 6.205684
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-28.54974{col 26}{space 2} 84.59277{col 37}{space 1}   -0.34{col 46}{space 3}0.737{col 54}{space 4}-197.3042{col 67}{space 3} 140.2047
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-210.5326{col 26}{space 2} 89.51879{col 37}{space 1}   -2.35{col 46}{space 3}0.022{col 54}{space 4} -389.114{col 67}{space 3}-31.95124
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0069868{col 26}{space 2} .0611554{col 37}{space 1}    0.11{col 46}{space 3}0.909{col 54}{space 4}-.1150123{col 67}{space 3} .1289859
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 7.085968{col 26}{space 2} 7.661193{col 37}{space 1}    0.92{col 46}{space 3}0.358{col 54}{space 4}-8.197374{col 67}{space 3} 22.36931
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0020596{col 26}{space 2} .0003243{col 37}{space 1}    6.35{col 46}{space 3}0.000{col 54}{space 4} .0014127{col 67}{space 3} .0027066
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1377.207{col 26}{space 2} 634.0948{col 37}{space 1}    2.17{col 46}{space 3}0.033{col 54}{space 4} 112.2491{col 67}{space 3} 2642.165
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg Right_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1 & Sex==2
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        80
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        71
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     69.08
+{txt}{col 49}        avg{col 67}= {res}     69.08
+{txt}{col 49}        max{col 67}= {res}     69.08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   8{txt},{res}   69.1{txt}){col 67}= {res}     10.37
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Right_Hipp~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2} -849.836{col 26}{space 2} 465.2158{col 37}{space 1}   -1.83{col 46}{space 3}0.072{col 54}{space 4}-1777.897{col 67}{space 3} 78.22474
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}-116.0939{col 26}{space 2} 85.76445{col 37}{space 1}   -1.35{col 46}{space 3}0.180{col 54}{space 4}-287.1857{col 67}{space 3} 54.99793
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-5.290059{col 26}{space 2} 5.256824{col 37}{space 1}   -1.01{col 46}{space 3}0.318{col 54}{space 4}-15.77692{col 67}{space 3} 5.196798
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-27.28149{col 26}{space 2} 86.82476{col 37}{space 1}   -0.31{col 46}{space 3}0.754{col 54}{space 4}-200.4885{col 67}{space 3} 145.9255
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-179.0588{col 26}{space 2} 91.88075{col 37}{space 1}   -1.95{col 46}{space 3}0.055{col 54}{space 4}-362.3521{col 67}{space 3} 4.234402
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0509453{col 26}{space 2}  .062769{col 37}{space 1}    0.81{col 46}{space 3}0.420{col 54}{space 4}-.0742727{col 67}{space 3} .1761634
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 12.38107{col 26}{space 2} 7.863334{col 37}{space 1}    1.57{col 46}{space 3}0.120{col 54}{space 4}-3.305526{col 67}{space 3} 28.06766
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0023605{col 26}{space 2} .0003329{col 37}{space 1}    7.09{col 46}{space 3}0.000{col 54}{space 4} .0016964{col 67}{space 3} .0030245
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 926.9845{col 26}{space 2} 650.8254{col 37}{space 1}    1.42{col 46}{space 3}0.159{col 54}{space 4}-371.3495{col 67}{space 3} 2225.318
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS C//
+. mi estimate: reg LnLesion_Volume bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1 & Sex==2 
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        80
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        71
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     69.08
+{txt}{col 49}        avg{col 67}= {res}     69.08
+{txt}{col 49}        max{col 67}= {res}     69.08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   8{txt},{res}   69.1{txt}){col 67}= {res}      1.15
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.3446
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}LnLesion_V~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-5.313928{col 26}{space 2} 4.297949{col 37}{space 1}   -1.24{col 46}{space 3}0.221{col 54}{space 4}-13.88792{col 67}{space 3} 3.260067
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 1.013302{col 26}{space 2} .7923446{col 37}{space 1}    1.28{col 46}{space 3}0.205{col 54}{space 4}-.5673491{col 67}{space 3} 2.593953
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-.0422653{col 26}{space 2} .0485658{col 37}{space 1}   -0.87{col 46}{space 3}0.387{col 54}{space 4}-.1391493{col 67}{space 3} .0546188
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} 1.245027{col 26}{space 2} .8021404{col 37}{space 1}    1.55{col 46}{space 3}0.125{col 54}{space 4} -.355166{col 67}{space 3} 2.845219
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} .5556761{col 26}{space 2} .8488507{col 37}{space 1}    0.65{col 46}{space 3}0.515{col 54}{space 4}-1.137699{col 67}{space 3} 2.249051
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-.0005827{col 26}{space 2} .0005799{col 37}{space 1}   -1.00{col 46}{space 3}0.318{col 54}{space 4}-.0017396{col 67}{space 3} .0005741
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2}-.0201684{col 26}{space 2} .0726463{col 37}{space 1}   -0.28{col 46}{space 3}0.782{col 54}{space 4}-.1650908{col 67}{space 3}  .124754
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} 3.16e-07{col 26}{space 2} 3.08e-06{col 37}{space 1}    0.10{col 46}{space 3}0.919{col 54}{space 4}-5.82e-06{col 67}{space 3} 6.45e-06
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5.051361{col 26}{space 2} 6.012724{col 37}{space 1}    0.84{col 46}{space 3}0.404{col 54}{space 4}-6.943445{col 67}{space 3} 17.04617
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. save, replace
+{txt}{p 0 4 2}
+file {bf}
+finaldata_imputed.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. 
+. *********************FEMALES******************************************************
+. 
+. **Model 1**
+. 
+. use HANDLS_paper51_NFLBRAINSCANFINALIZED,clear
+{txt}
+{com}. 
+. //ANALYSIS A//
+. reg TOTALBRAIN bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN if sample_final==1 & Sex==1,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        99
+{txt}{hline 13}{c +}{hline 34}   F(6, 92)        = {res}     3.43
+{txt}       Model {c |} {res} 1.1835e+11         6  1.9724e+10   {txt}Prob > F        ={res}    0.0043
+{txt}    Residual {c |} {res} 5.2973e+11        92  5.7580e+09   {txt}R-squared       ={res}    0.1826
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1293
+{txt}       Total {c |} {res} 6.4808e+11        98  6.6131e+09   {txt}Root MSE        =   {res}  75881
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}  TOTALBRAIN{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2} 60611.37{col 26}{space 2} 143543.8{col 37}{space 1}    0.42{col 46}{space 3}0.674{col 67}{space 3} .0422836
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 10429.26{col 26}{space 2} 22045.14{col 37}{space 1}    0.47{col 46}{space 3}0.637{col 67}{space 3} .0644827
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-2585.233{col 26}{space 2} 1110.913{col 37}{space 1}   -2.33{col 46}{space 3}0.022{col 67}{space 3}-.2997987
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-54861.73{col 26}{space 2} 16618.59{col 37}{space 1}   -3.30{col 46}{space 3}0.001{col 67}{space 3}-.3327315
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} -21718.7{col 26}{space 2} 18768.61{col 37}{space 1}   -1.16{col 46}{space 3}0.250{col 67}{space 3} -.129129
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-3.675402{col 26}{space 2} 13.33475{col 37}{space 1}   -0.28{col 46}{space 3}0.783{col 67}{space 3}-.0295244
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  1296461{col 26}{space 2} 62080.68{col 37}{space 1}   20.88{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg GM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN if sample_final==1 & Sex==1,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        99
+{txt}{hline 13}{c +}{hline 34}   F(6, 92)        = {res}     5.37
+{txt}       Model {c |} {res} 5.7845e+10         6  9.6409e+09   {txt}Prob > F        ={res}    0.0001
+{txt}    Residual {c |} {res} 1.6512e+11        92  1.7948e+09   {txt}R-squared       ={res}    0.2594
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2111
+{txt}       Total {c |} {res} 2.2297e+11        98  2.2752e+09   {txt}Root MSE        =   {res}  42365
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          GM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-18368.56{col 26}{space 2} 80141.43{col 37}{space 1}   -0.23{col 46}{space 3}0.819{col 67}{space 3}-.0218468
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 51.14537{col 26}{space 2} 12307.94{col 37}{space 1}    0.00{col 46}{space 3}0.997{col 67}{space 3} .0005391
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-1765.889{col 26}{space 2} 620.2299{col 37}{space 1}   -2.85{col 46}{space 3}0.005{col 67}{space 3}-.3491305
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-40716.33{col 26}{space 2} 9278.266{col 37}{space 1}   -4.39{col 46}{space 3}0.000{col 67}{space 3}-.4210052
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-9423.247{col 26}{space 2} 10478.64{col 37}{space 1}   -0.90{col 46}{space 3}0.371{col 67}{space 3}-.0955179
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-1.180273{col 26}{space 2} 7.444875{col 37}{space 1}   -0.16{col 46}{space 3}0.874{col 67}{space 3}-.0161642
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 768217.4{col 26}{space 2} 34660.04{col 37}{space 1}   22.16{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg WM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN if sample_final==1 & Sex==1,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        99
+{txt}{hline 13}{c +}{hline 34}   F(6, 92)        = {res}     1.75
+{txt}       Model {c |} {res} 1.4185e+10         6  2.3642e+09   {txt}Prob > F        ={res}    0.1185
+{txt}    Residual {c |} {res} 1.2435e+11        92  1.3516e+09   {txt}R-squared       ={res}    0.1024
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0439
+{txt}       Total {c |} {res} 1.3854e+11        98  1.4136e+09   {txt}Root MSE        =   {res}  36765
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          WM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2} 50149.05{col 26}{space 2} 69547.45{col 37}{space 1}    0.72{col 46}{space 3}0.473{col 67}{space 3} .0756681
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 10552.19{col 26}{space 2} 10680.94{col 37}{space 1}    0.99{col 46}{space 3}0.326{col 67}{space 3} .1411121
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-1149.859{col 26}{space 2}  538.241{col 37}{space 1}   -2.14{col 46}{space 3}0.035{col 67}{space 3}-.2884076
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-11291.82{col 26}{space 2} 8051.762{col 37}{space 1}   -1.40{col 46}{space 3}0.164{col 67}{space 3}-.1481222
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-12603.34{col 26}{space 2} 9093.454{col 37}{space 1}   -1.39{col 46}{space 3}0.169{col 67}{space 3}-.1620718
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-2.137384{col 26}{space 2} 6.460729{col 37}{space 1}   -0.33{col 46}{space 3}0.742{col 67}{space 3}-.0371356
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 501447.3{col 26}{space 2}  30078.3{col 37}{space 1}   16.67{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. //ANALYSIS B//
+. reg Left_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN ICV_volM2 if sample_final==1 & Sex==1,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        99
+{txt}{hline 13}{c +}{hline 34}   F(7, 91)        = {res}     6.06
+{txt}       Model {c |} {res} 2722560.14         7  388937.163   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  5837991.2        91  64153.7494   {txt}R-squared       ={res}    0.3180
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2656
+{txt}       Total {c |} {res} 8560551.34        98  87352.5647   {txt}Root MSE        =   {res} 253.29
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Left_Hippo~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-534.5664{col 26}{space 2} 481.6566{col 37}{space 1}   -1.11{col 46}{space 3}0.270{col 67}{space 3}-.1026084
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2}   30.615{col 26}{space 2} 73.83806{col 37}{space 1}    0.41{col 46}{space 3}0.679{col 67}{space 3} .0520819
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-8.276695{col 26}{space 2} 3.732758{col 37}{space 1}   -2.22{col 46}{space 3}0.029{col 67}{space 3}-.2640889
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-151.8617{col 26}{space 2} 59.27795{col 37}{space 1}   -2.56{col 46}{space 3}0.012{col 67}{space 3}-.2534171
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-64.80294{col 26}{space 2}  62.9347{col 37}{space 1}   -1.03{col 46}{space 3}0.306{col 67}{space 3}-.1060102
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0235662{col 26}{space 2} .0445114{col 37}{space 1}    0.53{col 46}{space 3}0.598{col 67}{space 3}  .052087
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0011119{col 26}{space 2} .0002941{col 37}{space 1}    3.78{col 46}{space 3}0.000{col 67}{space 3} .3616412
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2618.729{col 26}{space 2} 463.9685{col 37}{space 1}    5.64{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg Right_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN ICV_volM2 if sample_final==1 & Sex==1,beta
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        99
+{txt}{hline 13}{c +}{hline 34}   F(7, 91)        = {res}     8.06
+{txt}       Model {c |} {res} 4241831.79         7   605975.97   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 6837441.14        91  75136.7158   {txt}R-squared       ={res}    0.3829
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.3354
+{txt}       Total {c |} {res} 11079272.9        98  113053.805   {txt}Root MSE        =   {res} 274.11
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Right_Hipp~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-335.8026{col 26}{space 2} 521.2579{col 37}{space 1}   -0.64{col 46}{space 3}0.521{col 67}{space 3}-.0566579
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 12.25564{col 26}{space 2} 79.90894{col 37}{space 1}    0.15{col 46}{space 3}0.878{col 67}{space 3} .0183267
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2}-4.760906{col 26}{space 2}  4.03966{col 37}{space 1}   -1.18{col 46}{space 3}0.242{col 67}{space 3}-.1335298
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} -148.796{col 26}{space 2} 64.15171{col 37}{space 1}   -2.32{col 46}{space 3}0.023{col 67}{space 3}-.2182599
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-30.24663{col 26}{space 2} 68.10912{col 37}{space 1}   -0.44{col 46}{space 3}0.658{col 67}{space 3}-.0434936
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0446171{col 26}{space 2} .0481711{col 37}{space 1}    0.93{col 46}{space 3}0.357{col 67}{space 3} .0866834
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0017513{col 26}{space 2} .0003183{col 37}{space 1}    5.50{col 46}{space 3}0.000{col 67}{space 3} .5006964
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1874.788{col 26}{space 2} 502.1154{col 37}{space 1}    3.73{col 46}{space 3}0.000{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS C//
+. reg LnLesion_Volume bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN ICV_volM2 if sample_final==1 & Sex==1,beta 
+{txt}{p 0 6 2}note: {bf:Sex} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        99
+{txt}{hline 13}{c +}{hline 34}   F(7, 91)        = {res}     2.47
+{txt}       Model {c |} {res} 300.464182         7  42.9234545   {txt}Prob > F        ={res}    0.0231
+{txt}    Residual {c |} {res} 1583.48769        91  17.4009636   {txt}R-squared       ={res}    0.1595
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0948
+{txt}       Total {c |} {res} 1883.95187        98  19.2239987   {txt}Root MSE        =   {res} 4.1714
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}LnLesion_V~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 67}        Beta
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-1.149315{col 26}{space 2} 7.932556{col 37}{space 1}   -0.14{col 46}{space 3}0.885{col 67}{space 3}-.0148709
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 2.839808{col 26}{space 2} 1.216063{col 37}{space 1}    2.34{col 46}{space 3}0.022{col 67}{space 3} .3256549
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted){col 67}{res}{space 3}        .
+{txt}{space 7}w1Age {c |}{col 14}{res}{space 2} .0524912{col 26}{space 2}  .061476{col 37}{space 1}    0.85{col 46}{space 3}0.395{col 67}{space 3} .1129005
+{txt}{space 8}Race {c |}{col 14}{res}{space 2} 1.411867{col 26}{space 2} .9762674{col 37}{space 1}    1.45{col 46}{space 3}0.152{col 67}{space 3} .1588172
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} 1.577286{col 26}{space 2} 1.036492{col 37}{space 1}    1.52{col 46}{space 3}0.132{col 67}{space 3}  .173932
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-.0008332{col 26}{space 2} .0007331{col 37}{space 1}   -1.14{col 46}{space 3}0.259{col 67}{space 3}-.1241328
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} 5.58e-06{col 26}{space 2} 4.84e-06{col 37}{space 1}    1.15{col 46}{space 3}0.253{col 67}{space 3} .1222422
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-12.24804{col 26}{space 2} 7.641244{col 37}{space 1}   -1.60{col 46}{space 3}0.112{col 67}{space 3}        .
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. **Model 2**
+. 
+. use finaldata_imputed,clear
+{txt}
+{com}. 
+. 
+. //ANALYSIS A//
+. mi estimate: reg TOTALBRAIN bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI if sample_final==1 & Sex==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        99
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        91
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     89.06
+{txt}{col 49}        avg{col 67}= {res}     89.06
+{txt}{col 49}        max{col 67}= {res}     89.06
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   7{txt},{res}   89.1{txt}){col 67}= {res}      3.13
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0053
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}  TOTALBRAIN{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2} 50843.87{col 26}{space 2} 143549.2{col 37}{space 1}    0.35{col 46}{space 3}0.724{col 54}{space 4}-234382.5{col 67}{space 3} 336070.2
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 19998.28{col 26}{space 2} 23533.27{col 37}{space 1}    0.85{col 46}{space 3}0.398{col 54}{space 4}-26761.37{col 67}{space 3} 66757.93
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-2787.725{col 26}{space 2} 1122.944{col 37}{space 1}   -2.48{col 46}{space 3}0.015{col 54}{space 4} -5018.97{col 67}{space 3}-556.4804
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-53472.46{col 26}{space 2} 16634.08{col 37}{space 1}   -3.21{col 46}{space 3}0.002{col 54}{space 4}-86523.69{col 67}{space 3}-20421.23
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-22850.14{col 26}{space 2} 18762.22{col 37}{space 1}   -1.22{col 46}{space 3}0.226{col 54}{space 4} -60129.9{col 67}{space 3} 14429.62
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-1.515366{col 26}{space 2} 13.44415{col 37}{space 1}   -0.11{col 46}{space 3}0.911{col 54}{space 4}-28.22834{col 67}{space 3} 25.19761
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 1331.156{col 26}{space 2} 1159.709{col 37}{space 1}    1.15{col 46}{space 3}0.254{col 54}{space 4}-973.1375{col 67}{space 3}  3635.45
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  1242594{col 26}{space 2} 77737.58{col 37}{space 1}   15.98{col 46}{space 3}0.000{col 54}{space 4}  1088132{col 67}{space 3}  1397055
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg GM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI  if sample_final==1 & Sex==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        99
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        91
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     89.06
+{txt}{col 49}        avg{col 67}= {res}     89.06
+{txt}{col 49}        max{col 67}= {res}     89.06
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   7{txt},{res}   89.1{txt}){col 67}= {res}      4.97
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0001
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          GM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-25319.97{col 26}{space 2} 79781.03{col 37}{space 1}   -0.32{col 46}{space 3}0.752{col 54}{space 4}-183841.6{col 67}{space 3} 133201.7
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 6861.303{col 26}{space 2}  13079.2{col 37}{space 1}    0.52{col 46}{space 3}0.601{col 54}{space 4}-19126.54{col 67}{space 3} 32849.15
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}    -1910{col 26}{space 2} 624.1044{col 37}{space 1}   -3.06{col 46}{space 3}0.003{col 54}{space 4} -3150.07{col 67}{space 3}-669.9299
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-39727.61{col 26}{space 2} 9244.804{col 37}{space 1}   -4.30{col 46}{space 3}0.000{col 54}{space 4}-58096.65{col 67}{space 3}-21358.56
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-10228.48{col 26}{space 2} 10427.57{col 37}{space 1}   -0.98{col 46}{space 3}0.329{col 54}{space 4}-30947.64{col 67}{space 3} 10490.67
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .3569985{col 26}{space 2} 7.471922{col 37}{space 1}    0.05{col 46}{space 3}0.962{col 54}{space 4} -14.4894{col 67}{space 3}  15.2034
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 947.3676{col 26}{space 2}  644.537{col 37}{space 1}    1.47{col 46}{space 3}0.145{col 54}{space 4}-333.3011{col 67}{space 3} 2228.036
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 729880.6{col 26}{space 2}  43204.6{col 37}{space 1}   16.89{col 46}{space 3}0.000{col 54}{space 4} 644034.8{col 67}{space 3} 815726.4
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg WM bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI if sample_final==1 & Sex==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        99
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        91
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     89.06
+{txt}{col 49}        avg{col 67}= {res}     89.06
+{txt}{col 49}        max{col 67}= {res}     89.06
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   7{txt},{res}   89.1{txt}){col 67}= {res}      1.64
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.1358
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          WM{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2} 46107.69{col 26}{space 2} 69686.22{col 37}{space 1}    0.66{col 46}{space 3}0.510{col 54}{space 4}-92355.98{col 67}{space 3} 184571.4
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 14511.43{col 26}{space 2} 11424.27{col 37}{space 1}    1.27{col 46}{space 3}0.207{col 54}{space 4}-8188.132{col 67}{space 3} 37210.99
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-1233.641{col 26}{space 2} 545.1355{col 37}{space 1}   -2.26{col 46}{space 3}0.026{col 54}{space 4}-2316.803{col 67}{space 3}-150.4794
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}   -10717{col 26}{space 2} 8075.045{col 37}{space 1}   -1.33{col 46}{space 3}0.188{col 54}{space 4}-26761.78{col 67}{space 3} 5327.787
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-13071.48{col 26}{space 2} 9108.154{col 37}{space 1}   -1.44{col 46}{space 3}0.155{col 54}{space 4}-31169.01{col 67}{space 3}  5026.05
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-1.243657{col 26}{space 2} 6.526489{col 37}{space 1}   -0.19{col 46}{space 3}0.849{col 54}{space 4}-14.21152{col 67}{space 3} 11.72421
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 550.7732{col 26}{space 2} 562.9828{col 37}{space 1}    0.98{col 46}{space 3}0.331{col 54}{space 4}-567.8505{col 67}{space 3} 1669.397
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 479159.4{col 26}{space 2} 37737.86{col 37}{space 1}   12.70{col 46}{space 3}0.000{col 54}{space 4} 404175.8{col 67}{space 3} 554142.9
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS B//
+. mi estimate: reg Left_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1 & Sex==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        99
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        90
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     88.06
+{txt}{col 49}        avg{col 67}= {res}     88.06
+{txt}{col 49}        max{col 67}= {res}     88.06
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   8{txt},{res}   88.1{txt}){col 67}= {res}      5.40
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Left_Hippo~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-555.8414{col 26}{space 2} 482.6407{col 37}{space 1}   -1.15{col 46}{space 3}0.253{col 54}{space 4}-1514.979{col 67}{space 3} 403.2958
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 56.95118{col 26}{space 2} 79.29602{col 37}{space 1}    0.72{col 46}{space 3}0.475{col 54}{space 4}-100.6314{col 67}{space 3} 214.5338
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-8.864223{col 26}{space 2} 3.790681{col 37}{space 1}   -2.34{col 46}{space 3}0.022{col 54}{space 4}-16.39733{col 67}{space 3}-1.331118
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-150.2423{col 26}{space 2}  59.3566{col 37}{space 1}   -2.53{col 46}{space 3}0.013{col 54}{space 4}-268.1999{col 67}{space 3}-32.28476
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-68.45074{col 26}{space 2} 63.11595{col 37}{space 1}   -1.08{col 46}{space 3}0.281{col 54}{space 4}-193.8791{col 67}{space 3} 56.97767
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0293408{col 26}{space 2} .0449943{col 37}{space 1}    0.65{col 46}{space 3}0.516{col 54}{space 4}-.0600749{col 67}{space 3} .1187566
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 3.577684{col 26}{space 2} 3.904665{col 37}{space 1}    0.92{col 46}{space 3}0.362{col 54}{space 4}-4.181938{col 67}{space 3} 11.33731
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0010821{col 26}{space 2} .0002961{col 37}{space 1}    3.65{col 46}{space 3}0.000{col 54}{space 4} .0004936{col 67}{space 3} .0016706
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2515.952{col 26}{space 2} 477.7334{col 37}{space 1}    5.27{col 46}{space 3}0.000{col 54}{space 4} 1566.567{col 67}{space 3} 3465.337
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg Right_Hippocampus bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1 & Sex==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        99
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        90
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     88.06
+{txt}{col 49}        avg{col 67}= {res}     88.06
+{txt}{col 49}        max{col 67}= {res}     88.06
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   8{txt},{res}   88.1{txt}){col 67}= {res}      7.00
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Right_Hipp~s{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-342.8751{col 26}{space 2} 524.5245{col 37}{space 1}   -0.65{col 46}{space 3}0.515{col 54}{space 4}-1385.247{col 67}{space 3} 699.4965
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 21.01061{col 26}{space 2} 86.17737{col 37}{space 1}    0.24{col 46}{space 3}0.808{col 54}{space 4}-150.2471{col 67}{space 3} 192.2683
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}-4.956219{col 26}{space 2} 4.119638{col 37}{space 1}   -1.20{col 46}{space 3}0.232{col 54}{space 4}-13.14305{col 67}{space 3} 3.230612
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}-148.2576{col 26}{space 2} 64.50759{col 37}{space 1}   -2.30{col 46}{space 3}0.024{col 54}{space 4}-276.4516{col 67}{space 3}-20.06366
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2}-31.45928{col 26}{space 2} 68.59318{col 37}{space 1}   -0.46{col 46}{space 3}0.648{col 54}{space 4}-167.7724{col 67}{space 3} 104.8539
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2} .0465368{col 26}{space 2} .0488989{col 37}{space 1}    0.95{col 46}{space 3}0.344{col 54}{space 4}-.0506386{col 67}{space 3} .1437121
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2} 1.189334{col 26}{space 2} 4.243514{col 37}{space 1}    0.28{col 46}{space 3}0.780{col 54}{space 4}-7.243672{col 67}{space 3}  9.62234
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} .0017414{col 26}{space 2} .0003218{col 37}{space 1}    5.41{col 46}{space 3}0.000{col 54}{space 4} .0011018{col 67}{space 3}  .002381
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1840.621{col 26}{space 2} 519.1913{col 37}{space 1}    3.55{col 46}{space 3}0.001{col 54}{space 4} 808.8483{col 67}{space 3} 2872.394
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS C//
+. mi estimate: reg LnLesion_Volume bayes1LnNFL LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1 & Sex==1 
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}        99
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}        90
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}     88.06
+{txt}{col 49}        avg{col 67}= {res}     88.06
+{txt}{col 49}        max{col 67}= {res}     88.06
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   8{txt},{res}   88.1{txt}){col 67}= {res}      2.94
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0059
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}LnLesion_V~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}bayes1LnNFL {c |}{col 14}{res}{space 2}-2.015238{col 26}{space 2} 7.757097{col 37}{space 1}   -0.26{col 46}{space 3}0.796{col 54}{space 4}-17.43068{col 67}{space 3}  13.4002
+{txt}{space 5}LnNFLw1 {c |}{col 14}{res}{space 2} 3.911729{col 26}{space 2} 1.274461{col 37}{space 1}    3.07{col 46}{space 3}0.003{col 54}{space 4}  1.37903{col 67}{space 3} 6.444427
+{txt}{space 9}Sex {c |}{col 14}{res}{space 2}        0{col 26}{txt}  (omitted)
+{space 7}w1Age {c |}{col 14}{res}{space 2}  .028578{col 26}{space 2} .0609246{col 37}{space 1}    0.47{col 46}{space 3}0.640{col 54}{space 4}-.0924955{col 67}{space 3} .1496516
+{txt}{space 8}Race {c |}{col 14}{res}{space 2}  1.47778{col 26}{space 2}  .953991{col 37}{space 1}    1.55{col 46}{space 3}0.125{col 54}{space 4}-.4180576{col 67}{space 3} 3.373617
+{txt}{space 5}PovStat {c |}{col 14}{res}{space 2} 1.428815{col 26}{space 2} 1.014412{col 37}{space 1}    1.41{col 46}{space 3}0.162{col 54}{space 4}-.5870953{col 67}{space 3} 3.444725
+{txt}{space 1}TIME_V1SCAN {c |}{col 14}{res}{space 2}-.0005981{col 26}{space 2} .0007232{col 37}{space 1}   -0.83{col 46}{space 3}0.410{col 54}{space 4}-.0020352{col 67}{space 3}  .000839
+{txt}{space 7}w1BMI {c |}{col 14}{res}{space 2}  .145617{col 26}{space 2} .0627566{col 37}{space 1}    2.32{col 46}{space 3}0.023{col 54}{space 4} .0209028{col 67}{space 3} .2703312
+{txt}{space 3}ICV_volM2 {c |}{col 14}{res}{space 2} 4.36e-06{col 26}{space 2} 4.76e-06{col 37}{space 1}    0.92{col 46}{space 3}0.362{col 54}{space 4}-5.09e-06{col 67}{space 3} .0000138
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-16.43121{col 26}{space 2} 7.678225{col 37}{space 1}   -2.14{col 46}{space 3}0.035{col 54}{space 4}-31.68992{col 67}{space 3}-1.172509
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. save, replace
+{txt}{p 0 4 2}
+file {bf}
+finaldata_imputed.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. 
+. 
+. //INTERACTION BY Sex//
+. 
+. 
+. //ANALYSIS A//
+. mi estimate: reg TOTALBRAIN c.bayes1LnNFL##Sex LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI  if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       169
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    167.03
+{txt}{col 49}        avg{col 67}= {res}    167.03
+{txt}{col 49}        max{col 67}= {res}    167.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   9{txt},{res}  167.0{txt}){col 67}= {res}     15.71
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}       TOTALBRAIN{col 19}{c |} Coefficient{col 31}  Std. err.{col 43}      t{col 51}   P>|t|{col 59}     [95% con{col 72}f. interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}bayes1LnNFL {c |}{col 19}{res}{space 2} 32734.65{col 31}{space 2} 164042.8{col 42}{space 1}    0.20{col 51}{space 3}0.842{col 59}{space 4}-291129.9{col 72}{space 3} 356599.2
+{txt}{space 17} {c |}
+{space 14}Sex {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2} 142789.1{col 31}{space 2} 15662.62{col 42}{space 1}    9.12{col 51}{space 3}0.000{col 59}{space 4} 111866.9{col 72}{space 3} 173711.3
+{txt}{space 17} {c |}
+Sex#c.bayes1LnNFL {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2}-101484.9{col 31}{space 2} 197621.1{col 42}{space 1}   -0.51{col 51}{space 3}0.608{col 59}{space 4}-491641.9{col 72}{space 3}   288672
+{txt}{space 17} {c |}
+{space 10}LnNFLw1 {c |}{col 19}{res}{space 2}-648.2281{col 31}{space 2} 17636.76{col 42}{space 1}   -0.04{col 51}{space 3}0.971{col 59}{space 4}-35467.92{col 72}{space 3} 34171.46
+{txt}{space 14}Sex {c |}{col 19}{res}{space 2}        0{col 31}{txt}  (omitted)
+{space 12}w1Age {c |}{col 19}{res}{space 2} -2255.04{col 31}{space 2} 949.1901{col 42}{space 1}   -2.38{col 51}{space 3}0.019{col 59}{space 4}-4128.996{col 72}{space 3}-381.0847
+{txt}{space 13}Race {c |}{col 19}{res}{space 2}-70862.53{col 31}{space 2} 14411.11{col 42}{space 1}   -4.92{col 51}{space 3}0.000{col 59}{space 4}-99313.92{col 72}{space 3}-42411.14
+{txt}{space 10}PovStat {c |}{col 19}{res}{space 2}-2011.622{col 31}{space 2} 16251.08{col 42}{space 1}   -0.12{col 51}{space 3}0.902{col 59}{space 4} -34095.6{col 72}{space 3} 30072.36
+{txt}{space 6}TIME_V1SCAN {c |}{col 19}{res}{space 2}-21.26732{col 31}{space 2} 11.44319{col 42}{space 1}   -1.86{col 51}{space 3}0.065{col 59}{space 4}-43.85925{col 72}{space 3} 1.324606
+{txt}{space 12}w1BMI {c |}{col 19}{res}{space 2} 656.3685{col 31}{space 2}  1105.45{col 42}{space 1}    0.59{col 51}{space 3}0.553{col 59}{space 4}-1526.086{col 72}{space 3} 2838.823
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2}  1314433{col 31}{space 2} 65375.29{col 42}{space 1}   20.11{col 51}{space 3}0.000{col 59}{space 4}  1185364{col 72}{space 3}  1443501
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg GM c.bayes1LnNFL##Sex Sex w1Age Race PovStat TIME_V1SCAN w1BMI   if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       170
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    168.03
+{txt}{col 49}        avg{col 67}= {res}    168.03
+{txt}{col 49}        max{col 67}= {res}    168.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   8{txt},{res}  168.0{txt}){col 67}= {res}     20.17
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}               GM{col 19}{c |} Coefficient{col 31}  Std. err.{col 43}      t{col 51}   P>|t|{col 59}     [95% con{col 72}f. interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}bayes1LnNFL {c |}{col 19}{res}{space 2} -29878.3{col 31}{space 2} 86422.63{col 42}{space 1}   -0.35{col 51}{space 3}0.730{col 59}{space 4}-200492.3{col 72}{space 3} 140735.7
+{txt}{space 17} {c |}
+{space 14}Sex {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2} 71898.07{col 31}{space 2} 8343.784{col 42}{space 1}    8.62{col 51}{space 3}0.000{col 59}{space 4} 55425.92{col 72}{space 3} 88370.22
+{txt}{space 17} {c |}
+Sex#c.bayes1LnNFL {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2} 11419.56{col 31}{space 2} 105559.1{col 42}{space 1}    0.11{col 51}{space 3}0.914{col 59}{space 4}-196973.4{col 72}{space 3} 219812.5
+{txt}{space 17} {c |}
+{space 14}Sex {c |}{col 19}{res}{space 2}        0{col 31}{txt}  (omitted)
+{space 12}w1Age {c |}{col 19}{res}{space 2}-2083.249{col 31}{space 2} 414.7372{col 42}{space 1}   -5.02{col 51}{space 3}0.000{col 59}{space 4}-2902.016{col 72}{space 3}-1264.482
+{txt}{space 13}Race {c |}{col 19}{res}{space 2}-49694.43{col 31}{space 2}  7523.95{col 42}{space 1}   -6.60{col 51}{space 3}0.000{col 59}{space 4}-64548.08{col 72}{space 3}-34840.78
+{txt}{space 10}PovStat {c |}{col 19}{res}{space 2}-2838.278{col 31}{space 2}  8686.73{col 42}{space 1}   -0.33{col 51}{space 3}0.744{col 59}{space 4}-19987.46{col 72}{space 3} 14310.91
+{txt}{space 6}TIME_V1SCAN {c |}{col 19}{res}{space 2}-8.153427{col 31}{space 2} 6.112225{col 42}{space 1}   -1.33{col 51}{space 3}0.184{col 59}{space 4}-20.22007{col 72}{space 3} 3.913219
+{txt}{space 12}w1BMI {c |}{col 19}{res}{space 2} 603.5874{col 31}{space 2} 572.0123{col 42}{space 1}    1.06{col 51}{space 3}0.293{col 59}{space 4}-525.6691{col 72}{space 3} 1732.844
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2} 783053.5{col 31}{space 2} 32972.44{col 42}{space 1}   23.75{col 51}{space 3}0.000{col 59}{space 4} 717959.9{col 72}{space 3} 848147.2
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg WM c.bayes1LnNFL##Sex Sex w1Age Race PovStat TIME_V1SCAN w1BMI  if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       170
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    168.03
+{txt}{col 49}        avg{col 67}= {res}    168.03
+{txt}{col 49}        max{col 67}= {res}    168.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   8{txt},{res}  168.0{txt}){col 67}= {res}     11.73
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}               WM{col 19}{c |} Coefficient{col 31}  Std. err.{col 43}      t{col 51}   P>|t|{col 59}     [95% con{col 72}f. interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}bayes1LnNFL {c |}{col 19}{res}{space 2} 29198.54{col 31}{space 2} 78508.33{col 42}{space 1}    0.37{col 51}{space 3}0.710{col 59}{space 4}-125791.2{col 72}{space 3} 184188.3
+{txt}{space 17} {c |}
+{space 14}Sex {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2} 59525.14{col 31}{space 2} 7579.687{col 42}{space 1}    7.85{col 51}{space 3}0.000{col 59}{space 4} 44561.46{col 72}{space 3} 74488.83
+{txt}{space 17} {c |}
+Sex#c.bayes1LnNFL {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2}-73579.82{col 31}{space 2} 95892.35{col 42}{space 1}   -0.77{col 51}{space 3}0.444{col 59}{space 4}-262888.8{col 72}{space 3} 115729.2
+{txt}{space 17} {c |}
+{space 14}Sex {c |}{col 19}{res}{space 2}        0{col 31}{txt}  (omitted)
+{space 12}w1Age {c |}{col 19}{res}{space 2}-672.4594{col 31}{space 2} 376.7569{col 42}{space 1}   -1.78{col 51}{space 3}0.076{col 59}{space 4}-1416.246{col 72}{space 3} 71.32736
+{txt}{space 13}Race {c |}{col 19}{res}{space 2} -18536.8{col 31}{space 2} 6834.931{col 42}{space 1}   -2.71{col 51}{space 3}0.007{col 59}{space 4} -32030.2{col 72}{space 3}-5043.402
+{txt}{space 10}PovStat {c |}{col 19}{res}{space 2}-3935.345{col 31}{space 2} 7891.227{col 42}{space 1}   -0.50{col 51}{space 3}0.619{col 59}{space 4}-19514.06{col 72}{space 3} 11643.37
+{txt}{space 6}TIME_V1SCAN {c |}{col 19}{res}{space 2}-11.64752{col 31}{space 2} 5.552487{col 42}{space 1}   -2.10{col 51}{space 3}0.037{col 59}{space 4}-22.60914{col 72}{space 3}-.6859028
+{txt}{space 12}w1BMI {c |}{col 19}{res}{space 2} 127.8096{col 31}{space 2} 519.6292{col 42}{space 1}    0.25{col 51}{space 3}0.806{col 59}{space 4}-898.0332{col 72}{space 3} 1153.652
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2} 513776.8{col 31}{space 2} 29952.93{col 42}{space 1}   17.15{col 51}{space 3}0.000{col 59}{space 4} 454644.3{col 72}{space 3} 572909.4
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. 
+. //ANALYSIS B//
+. mi estimate: reg Left_Hippocampus c.bayes1LnNFL##Sex  LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       168
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    166.04
+{txt}{col 49}        avg{col 67}= {res}    166.04
+{txt}{col 49}        max{col 67}= {res}    166.04
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  10{txt},{res}  166.0{txt}){col 67}= {res}     15.37
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1} Left_Hippocampus{col 19}{c |} Coefficient{col 31}  Std. err.{col 43}      t{col 51}   P>|t|{col 59}     [95% con{col 72}f. interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}bayes1LnNFL {c |}{col 19}{res}{space 2}-976.2149{col 31}{space 2} 526.7481{col 42}{space 1}   -1.85{col 51}{space 3}0.066{col 59}{space 4}-2016.202{col 72}{space 3} 63.77266
+{txt}{space 17} {c |}
+{space 14}Sex {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2} -12.2493{col 31}{space 2} 64.63427{col 42}{space 1}   -0.19{col 51}{space 3}0.850{col 59}{space 4}-139.8603{col 72}{space 3} 115.3617
+{txt}{space 17} {c |}
+Sex#c.bayes1LnNFL {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2} 115.4336{col 31}{space 2} 634.7221{col 42}{space 1}    0.18{col 51}{space 3}0.856{col 59}{space 4}-1137.733{col 72}{space 3}   1368.6
+{txt}{space 17} {c |}
+{space 10}LnNFLw1 {c |}{col 19}{res}{space 2}-94.42858{col 31}{space 2} 56.56612{col 42}{space 1}   -1.67{col 51}{space 3}0.097{col 59}{space 4}-206.1102{col 72}{space 3}   17.253
+{txt}{space 14}Sex {c |}{col 19}{res}{space 2}        0{col 31}{txt}  (omitted)
+{space 12}w1Age {c |}{col 19}{res}{space 2} -4.39882{col 31}{space 2} 3.046886{col 42}{space 1}   -1.44{col 51}{space 3}0.151{col 59}{space 4}-10.41445{col 72}{space 3} 1.616813
+{txt}{space 13}Race {c |}{col 19}{res}{space 2}-101.6377{col 31}{space 2} 50.29988{col 42}{space 1}   -2.02{col 51}{space 3}0.045{col 59}{space 4}-200.9475{col 72}{space 3} -2.32791
+{txt}{space 10}PovStat {c |}{col 19}{res}{space 2}-129.5135{col 31}{space 2} 52.12708{col 42}{space 1}   -2.48{col 51}{space 3}0.014{col 59}{space 4}-232.4309{col 72}{space 3}-26.59617
+{txt}{space 6}TIME_V1SCAN {c |}{col 19}{res}{space 2} .0170572{col 31}{space 2} .0369118{col 42}{space 1}    0.46{col 51}{space 3}0.645{col 59}{space 4}-.0558198{col 72}{space 3} .0899342
+{txt}{space 12}w1BMI {c |}{col 19}{res}{space 2} 2.586793{col 31}{space 2} 3.549091{col 42}{space 1}    0.73{col 51}{space 3}0.467{col 59}{space 4}-4.420373{col 72}{space 3} 9.593958
+{txt}{space 8}ICV_volM2 {c |}{col 19}{res}{space 2} .0016537{col 31}{space 2} .0002174{col 42}{space 1}    7.61{col 51}{space 3}0.000{col 59}{space 4} .0012245{col 72}{space 3}  .002083
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2} 1966.318{col 31}{space 2} 374.4193{col 42}{space 1}    5.25{col 51}{space 3}0.000{col 59}{space 4} 1227.082{col 72}{space 3} 2705.555
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. mi estimate: reg Right_Hippocampus c.bayes1LnNFL##Sex Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       169
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    167.03
+{txt}{col 49}        avg{col 67}= {res}    167.03
+{txt}{col 49}        max{col 67}= {res}    167.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   9{txt},{res}  167.0{txt}){col 67}= {res}     18.88
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}Right_Hippocampus{col 19}{c |} Coefficient{col 31}  Std. err.{col 43}      t{col 51}   P>|t|{col 59}     [95% con{col 72}f. interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}bayes1LnNFL {c |}{col 19}{res}{space 2}-555.3238{col 31}{space 2} 542.1849{col 42}{space 1}   -1.02{col 51}{space 3}0.307{col 59}{space 4}-1625.742{col 72}{space 3} 515.0945
+{txt}{space 17} {c |}
+{space 14}Sex {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2} -88.0126{col 31}{space 2} 67.38127{col 42}{space 1}   -1.31{col 51}{space 3}0.193{col 59}{space 4}-221.0413{col 72}{space 3} 45.01609
+{txt}{space 17} {c |}
+Sex#c.bayes1LnNFL {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2}-58.25372{col 31}{space 2} 662.4227{col 42}{space 1}   -0.09{col 51}{space 3}0.930{col 59}{space 4}-1366.054{col 72}{space 3} 1249.546
+{txt}{space 17} {c |}
+{space 14}Sex {c |}{col 19}{res}{space 2}        0{col 31}{txt}  (omitted)
+{space 12}w1Age {c |}{col 19}{res}{space 2}-5.297094{col 31}{space 2} 2.601649{col 42}{space 1}   -2.04{col 51}{space 3}0.043{col 59}{space 4}-10.43345{col 72}{space 3}-.1607419
+{txt}{space 13}Race {c |}{col 19}{res}{space 2}-85.72279{col 31}{space 2} 51.52844{col 42}{space 1}   -1.66{col 51}{space 3}0.098{col 59}{space 4}-187.4537{col 72}{space 3} 16.00816
+{txt}{space 10}PovStat {c |}{col 19}{res}{space 2} -101.309{col 31}{space 2} 54.44026{col 42}{space 1}   -1.86{col 51}{space 3}0.065{col 59}{space 4}-208.7887{col 72}{space 3} 6.170669
+{txt}{space 6}TIME_V1SCAN {c |}{col 19}{res}{space 2} .0484497{col 31}{space 2} .0385205{col 42}{space 1}    1.26{col 51}{space 3}0.210{col 59}{space 4}-.0276001{col 72}{space 3} .1244995
+{txt}{space 12}w1BMI {c |}{col 19}{res}{space 2} 3.978088{col 31}{space 2} 3.588085{col 42}{space 1}    1.11{col 51}{space 3}0.269{col 59}{space 4}-3.105753{col 72}{space 3} 11.06193
+{txt}{space 8}ICV_volM2 {c |}{col 19}{res}{space 2}  .002078{col 31}{space 2} .0002271{col 42}{space 1}    9.15{col 51}{space 3}0.000{col 59}{space 4} .0016296{col 72}{space 3} .0025263
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2} 1400.834{col 31}{space 2} 384.6371{col 42}{space 1}    3.64{col 51}{space 3}0.000{col 59}{space 4} 641.4576{col 72}{space 3} 2160.211
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //ANALYSIS C//
+. mi estimate: reg LnLesion_Volume c.bayes1LnNFL##Sex LnNFLw1 Sex w1Age Race PovStat TIME_V1SCAN w1BMI ICV_volM2 if sample_final==1 
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}       179
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}       168
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    166.04
+{txt}{col 49}        avg{col 67}= {res}    166.04
+{txt}{col 49}        max{col 67}= {res}    166.04
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  10{txt},{res}  166.0{txt}){col 67}= {res}      2.29
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0153
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}  LnLesion_Volume{col 19}{c |} Coefficient{col 31}  Std. err.{col 43}      t{col 51}   P>|t|{col 59}     [95% con{col 72}f. interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}bayes1LnNFL {c |}{col 19}{res}{space 2}-3.650852{col 31}{space 2} 6.809881{col 42}{space 1}   -0.54{col 51}{space 3}0.593{col 59}{space 4}-17.09597{col 72}{space 3} 9.794268
+{txt}{space 17} {c |}
+{space 14}Sex {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2} .3207692{col 31}{space 2} .8356018{col 42}{space 1}    0.38{col 51}{space 3}0.702{col 59}{space 4}-1.329005{col 72}{space 3} 1.970544
+{txt}{space 17} {c |}
+Sex#c.bayes1LnNFL {c |}
+{space 13}Men  {c |}{col 19}{res}{space 2} 1.469946{col 31}{space 2} 8.205786{col 42}{space 1}    0.18{col 51}{space 3}0.858{col 59}{space 4}-14.73119{col 72}{space 3} 17.67108
+{txt}{space 17} {c |}
+{space 10}LnNFLw1 {c |}{col 19}{res}{space 2}  2.21744{col 31}{space 2} .7312955{col 42}{space 1}    3.03{col 51}{space 3}0.003{col 59}{space 4} .7736029{col 72}{space 3} 3.661276
+{txt}{space 14}Sex {c |}{col 19}{res}{space 2}        0{col 31}{txt}  (omitted)
+{space 12}w1Age {c |}{col 19}{res}{space 2} .0055045{col 31}{space 2} .0393906{col 42}{space 1}    0.14{col 51}{space 3}0.889{col 59}{space 4}-.0722666{col 72}{space 3} .0832755
+{txt}{space 13}Race {c |}{col 19}{res}{space 2} 1.348296{col 31}{space 2} .6502847{col 42}{space 1}    2.07{col 51}{space 3}0.040{col 59}{space 4} .0644031{col 72}{space 3} 2.632188
+{txt}{space 10}PovStat {c |}{col 19}{res}{space 2} .8314082{col 31}{space 2}  .673907{col 42}{space 1}    1.23{col 51}{space 3}0.219{col 59}{space 4}-.4991232{col 72}{space 3}  2.16194
+{txt}{space 6}TIME_V1SCAN {c |}{col 19}{res}{space 2}-.0006506{col 31}{space 2} .0004772{col 42}{space 1}   -1.36{col 51}{space 3}0.175{col 59}{space 4}-.0015928{col 72}{space 3} .0002915
+{txt}{space 12}w1BMI {c |}{col 19}{res}{space 2} .0610329{col 31}{space 2} .0458832{col 42}{space 1}    1.33{col 51}{space 3}0.185{col 59}{space 4}-.0295569{col 72}{space 3} .1516226
+{txt}{space 8}ICV_volM2 {c |}{col 19}{res}{space 2} 2.24e-06{col 31}{space 2} 2.81e-06{col 42}{space 1}    0.80{col 51}{space 3}0.427{col 59}{space 4}-3.31e-06{col 72}{space 3} 7.79e-06
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2}-5.608782{col 31}{space 2} 4.840551{col 42}{space 1}   -1.16{col 51}{space 3}0.248{col 59}{space 4}-15.16575{col 72}{space 3} 3.948182
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. save, replace
+{txt}{p 0 4 2}
+file {bf}
+finaldata_imputed.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. 
+. 
+. 
+. capture log close
+{smcl}
+{com}{sf}{ul off}
